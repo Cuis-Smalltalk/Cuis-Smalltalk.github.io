@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Cuis-smalltalk.github.io by Cuis-Smalltalk</title>
+    <title>Cuis-Smalltalk.github.io by bpieber</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,53 +17,90 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Cuis-smalltalk.github.io</h1>
+        <h1>Cuis-Smalltalk.github.io</h1>
         <p>Cuis-Smalltalk organization page</p>
-        <p class="view"><a href="https://github.com/Cuis-Smalltalk">View the Project on GitHub <small>Cuis-Smalltalk</small></a></p>
+        <p class="view"><a href="https://github.com/bpieber/Cuis-Smalltalk.github.io">View the Project on GitHub <small>bpieber/Cuis-Smalltalk.github.io</small></a></p>
         <ul>
-          <li class="single"><a href="">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/bpieber/Cuis-Smalltalk.github.io/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/bpieber/Cuis-Smalltalk.github.io/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/bpieber/Cuis-Smalltalk.github.io">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <h3>
-<a name="this-is-the-github-hosted-page-for-cuis-smalltalk" class="anchor" href="#this-is-the-github-hosted-page-for-cuis-smalltalk"><span class="octicon octicon-link"></span></a>This is the github hosted page for Cuis Smalltalk.</h3>
+        <h2>
+<a name="cuis" class="anchor" href="#cuis"><span class="octicon octicon-link"></span></a>Cuis</h2>
 
-<p>The idea is to make this the main web page of the project. We need to add content! Please help and send pull requests.</p>
+<p><a href="http://www.cuis-smalltalk.org">Cuis Smalltalk</a> - Cuis for short - is a free Smalltalk-80 environment originally derived from <a href="http://www.squeak.org">Squeak</a> with a specific set of goals: being simple and powerful. It is also portable to any platform, fast and efficient. This means it is a great tool for running on any hardware, ranging from supercomputers to tablets and smart phones, and everything in between, including regular PCs.</p>
+
+<p>Cuis is</p>
+
+<ul>
+<li>Easy to understand and extend</li>
+<li>Small</li>
+<li>Clean</li>
+</ul><p>Like Squeak, Pharo and other Squeak variants, Cuis is also:</p>
+
+<ul>
+<li>Open Source</li>
+<li>Multiplatform</li>
+</ul><p>Like other Smalltalk-80 environments (including Squeak, Pharo and others), Cuis is also:</p>
+
+<ul>
+<li>A complete development environment written in itself</li>
+<li>A pure Object Oriented language</li>
+</ul><p>Cuis is different from other Squeak variants in that it takes an active attitude towards system complexity.</p>
+
+<p>As systems grow older, they usually become more complex. New features are added as layers on top of whatever is below, sometimes without really understanding it, and almost always without modifying it. Complexity grows without control. At some point, the system can't evolve anymore and becomes "legacy code".</p>
+
+<p>The only way to avoid this is by understanding the complete system, and reengineering the whole system all the time. Keeping it simple and consistent.</p>
+
+<p>This is important. Complexity puts a limit to the level of understanding of the system a person might reach, and therefore limits the things that can be done with it. Dan Ingalls says all this in <a href="http://www.cs.virginia.edu/%7Eevans/cs655/readings/smalltalk.html">"Design Principles Behind Smalltalk"</a>. Even if you have already done so, please go and read it again!</p>
+
+<p>Cuis is continuously evolving towards simplicity. Each release is better (i.e. simpler) than the previous one. At the same time, features are enhanced, and any bugs fixed. Cuis includes recent enhancements from Squeak, but only those that meet Cuis objectives: stuff the complexity of which outweighs its utility is not included.</p>
+
+<p>If you want to know how Cuis evolved please check the <a href="http://www.cuis-smalltalk.org/CuisReleaseNotes.html">Release Notes</a>.</p>
 
 <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>To get started with Cuis you need to do the following:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<ol>
+<li><p>Download Cuis by clicking on <a href="https://github.com/bpieber/Cuis-Smalltalk-Dev/archive/master.zip">Download ZIP</a>.</p></li>
+<li><p>Extract the downloaded ZIP archive.</p></li>
+<li><p>Get a VM for your platform. You can run Cuis with Squeak's official Virtual Machines from <a href="http://www.squeakvm.org">http://www.squeakvm.org</a> or the faster Cog VMs from <a href="http://www.mirandabanda.org/files/Cog/VM/">Eliot Miranda's site</a>. (Please use the non-MT variants of Eliot's latest release.)</p></li>
+<li><p>Start Cuis by dragging the Cuis 4.2 image onto the VM.</p></li>
+</ol><p>As an alternative you can use the following in a shell if you have Git installed and configured:</p>
+
+<pre><code>mkdir CuisDevelopment
+cd CuisDevelopment
+git clone https://github.com/bpieber/Cuis-Smalltalk-Dev.git
+Cuis-Smalltalk-Dev/bin/newImage.sh MyProject
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>The last line creates a new image with a current Cog VM in a folder named MyProject. Start Cuis by dragging MyProject.image onto the Cog VM. This method has the advantage to set you up to easily contribute code back to Cuis packages.</p>
+
+<p>Disclaimer: It should work on OS X and Unix. However, I only tested it on OS X. Please test on other platforms and let me know the results. Feel free to send pull requests!</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="contributing-to-cuis" class="anchor" href="#contributing-to-cuis"><span class="octicon octicon-link"></span></a>Contributing to Cuis</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Cuis is maintained on <a href="https://github.com/Cuis-Smalltalk">https://github.com/Cuis-Smalltalk</a>.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>Please read <a href="http://www.cuis-smalltalk.org/CodeManagementInCuis4.html">Code Management in Cuis 4</a>, about developing packages for Cuis, and <a href="http://www.cuis-smalltalk.org/CuisAndGitHub.html">Using Git and GitHub to host and manage Cuis code</a>. While Cuis should work equally well with any file-based DVCS, we encourage the use of Git and GitHub.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>To contribute code, please use an image with all included packages already loaded, and include new versions of affected packages. This will ensure we don't break them while we evolve Cuis.
+Here is a Smalltalk script to load all packages currently included:</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<pre><code>#('Graphics-Files-Additional' 'Network-Kernel' 'SignalProcessing' 'Tests' 'Theme-Themes')
+    do: [:each | Feature require: each]
+</code></pre>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Cuis is distributed subject to the MIT License. See the LICENSE file. Any contribution submitted for incorporation into or for distribution with Cuis shall be presumed subject to the same license.</p>
       </section>
     </div>
     <footer>
+      <p>Project maintained by <a href="https://github.com/bpieber">bpieber</a></p>
       <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
