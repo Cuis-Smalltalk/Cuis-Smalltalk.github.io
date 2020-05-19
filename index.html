@@ -1,106 +1,35 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Cuis-Smalltalk.github.io by Cuis-Smalltalk</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Cuis-Smalltalk.github.io</h1>
-        <p>Cuis-Smalltalk organization page</p>
-        <p class="view"><a href="https://github.com/Cuis-Smalltalk">View the Project on GitHub <small>Cuis-Smalltalk</small></a></p>
-        <ul>
-          <li class="single"><a href="">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h2>
-<a name="cuis" class="anchor" href="#cuis"><span class="octicon octicon-link"></span></a>Cuis</h2>
-
-<p><a href="http://www.cuis-smalltalk.org">Cuis Smalltalk</a> - Cuis for short - is a free Smalltalk-80 environment originally derived from <a href="http://www.squeak.org">Squeak</a> with a specific set of goals: being simple and powerful. It is also portable to any platform, fast and efficient. This means it is a great tool for running on any hardware, ranging from supercomputers to tablets and smart phones, and everything in between, including regular PCs.</p>
-
-<p>Cuis is</p>
-
-<ul>
-<li>Easy to understand and extend</li>
-<li>Small</li>
-<li>Clean</li>
-</ul><p>Like Squeak, Pharo and other Squeak variants, Cuis is also:</p>
-
-<ul>
-<li>Open Source</li>
-<li>Multiplatform</li>
-</ul><p>Like other Smalltalk-80 environments (including Squeak, Pharo and others), Cuis is also:</p>
-
-<ul>
-<li>A complete development environment written in itself</li>
-<li>A pure Object Oriented language</li>
-</ul><p>Cuis is different from other Squeak variants in that it takes an active attitude towards system complexity.</p>
-
-<p>As systems grow older, they usually become more complex. New features are added as layers on top of whatever is below, sometimes without really understanding it, and almost always without modifying it. Complexity grows without control. At some point, the system can't evolve anymore and becomes "legacy code".</p>
-
-<p>The only way to avoid this is by understanding the complete system, and reengineering the whole system all the time. Keeping it simple and consistent.</p>
-
-<p>This is important. Complexity puts a limit to the level of understanding of the system a person might reach, and therefore limits the things that can be done with it. Dan Ingalls says all this in <a href="http://www.cs.virginia.edu/%7Eevans/cs655/readings/smalltalk.html">"Design Principles Behind Smalltalk"</a>. Even if you have already done so, please go and read it again!</p>
-
-<p>Cuis is continuously evolving towards simplicity. Each release is better (i.e. simpler) than the previous one. At the same time, features are enhanced, and any bugs fixed. Cuis includes recent enhancements from Squeak, but only those that meet Cuis objectives: stuff the complexity of which outweighs its utility is not included.</p>
-
-<p>If you want to know how Cuis evolved please check the <a href="http://www.cuis-smalltalk.org/CuisReleaseNotes.html">Release Notes</a>.</p>
-
-<h3>
-<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h3>
-
-<p>To get started with Cuis you need to do the following:</p>
-
-<ol>
-<li><p>Download Cuis by clicking on <a href="https://github.com/bpieber/Cuis-Smalltalk-Dev/archive/master.zip">Download ZIP</a>.</p></li>
-<li><p>Extract the downloaded ZIP archive.</p></li>
-<li><p>Get a VM for your platform. You can run Cuis with Squeak's official Virtual Machines from <a href="http://www.squeakvm.org">http://www.squeakvm.org</a> or the faster Cog VMs from <a href="http://www.mirandabanda.org/files/Cog/VM/">Eliot Miranda's site</a>. (Please use the non-MT variants of Eliot's latest release.)</p></li>
-<li><p>Start Cuis by dragging the Cuis 4.2 image onto the VM.</p></li>
-</ol><p>As an alternative you can use the following in a shell if you have Git installed and configured:</p>
-
-<pre><code>mkdir CuisDevelopment
-cd CuisDevelopment
-git clone https://github.com/bpieber/Cuis-Smalltalk-Dev.git
-Cuis-Smalltalk-Dev/bin/newImage.sh MyProject
-</code></pre>
-
-<p>The last line creates a new image with a current Cog VM in a folder named MyProject. Start Cuis by dragging MyProject.image onto the Cog VM. This method has the advantage to set you up to easily contribute code back to Cuis packages.</p>
-
-<p>Disclaimer: It should work on OS X and Unix. However, I only tested it on OS X. Please test on other platforms and let me know the results. Feel free to send pull requests!</p>
-
-<h3>
-<a name="contributing-to-cuis" class="anchor" href="#contributing-to-cuis"><span class="octicon octicon-link"></span></a>Contributing to Cuis</h3>
-
-<p>Cuis is maintained on <a href="https://github.com/Cuis-Smalltalk">https://github.com/Cuis-Smalltalk</a>.</p>
-
-<p>Please read <a href="http://www.jvuletich.org/Cuis/CodeManagementInCuis4.html">Code Management in Cuis 4</a>, about developing packages for Cuis, and <a href="http://www.jvuletich.org/Cuis/CuisAndGitHub.html">Using Git and GitHub to host and manage Cuis code</a>. While Cuis should work equally well with any file-based DVCS, we encourage the use of Git and GitHub.</p>
-
-<p>To contribute code, please use an image with all included packages already loaded, and include new versions of affected packages. This will ensure we don't break them while we evolve Cuis.
-Here is a Smalltalk script to load all packages currently included:</p>
-
-<pre><code>#('Graphics-Files-Additional' 'Network-Kernel' 'SignalProcessing' 'Tests' 'Theme-Themes')
-    do: [:each | Feature require: each]
-</code></pre>
-
-<p>Cuis is distributed subject to the MIT License. See the LICENSE file. Any contribution submitted for incorporation into or for distribution with Cuis shall be presumed subject to the same license.</p>
-      </section>
-    </div>
-    <footer>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuis Smalltalk Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Cuis Smalltalk',
+      repo: 'https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev',
+      basePath: '/docs/',
+      loadSidebar: true,
+      paths: 'auto',
+      search: {
+        noData: {
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/': 'Search'
+        }
+      }
+  }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-smalltalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+</body>
 </html>
